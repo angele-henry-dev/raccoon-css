@@ -1,7 +1,7 @@
 @import './base.css';
-@import './buttons.css';
-@import './components.css';
+@import './typography.css';
 @import './layout.css';
 @import './sections.css';
-@import './typography.css';
+@import './buttons.css';
+@import './components.css';
 @import './utilities.css';

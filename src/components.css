@@ -87,11 +87,29 @@ ol {
 
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(145deg, #1a1d3a, #0f1122);
   border-width: 1px;
   border-radius: 12px;
   padding: calc(var(--spacing) * 8);
   transition: all 0.3s ease;
+
+  .ribbon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary);
+    color: var(--background);
+    padding-left: calc(var(--spacing) * 3);
+    padding-right: calc(var(--spacing) * 3);
+    padding-top: calc(var(--spacing) * 1);
+    padding-bottom: calc(var(--spacing) * 1);
+    font-weight: bold;
+    border-bottom-left-radius: 0.5rem;
+    border-top-right-radius: 0.75rem;
+    font-size: 0.75rem;
+  }
 }
 .card-hover:hover {
   transform: translateY(-5px);
