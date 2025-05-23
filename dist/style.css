@@ -27,6 +27,10 @@
   font-family: 'OpenDyslexic', 'Poppins', sans-serif;
 }
 
+* {
+  border-color: #2a2d4a;
+}
+
 html, body, main {
   width: 100%;
   overflow-x: hidden;
@@ -37,7 +41,6 @@ body {
   font-size: 14pt;
   background-color: var(--background);
   color: var(--foreground);
-  border-color: #2a2d4a;
   margin: 0;
 }
 
@@ -166,6 +169,35 @@ button:disabled {
   opacity: 0.6;
 }
 
+/* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 50;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  --tw-backdrop-blur: blur(64px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur);
+  backdrop-filter: var(--tw-backdrop-blur);
+  padding: 0 10px;
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+  }
+}
+
 /* ACCORDEON */
 
 details {
@@ -209,6 +241,12 @@ ol {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(102, 252, 241, 0.1);
   border-color: var(--secondary);
+}
+
+/* TABLES */
+
+table {
+  width: 100%;
 }
 
 /* PRE FOR CODE */
@@ -330,6 +368,10 @@ h3 {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: calc(var(--spacing) * 6);
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-right {
