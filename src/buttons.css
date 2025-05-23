@@ -2,7 +2,8 @@
 
 a {
   text-decoration-line: none;
-  text-underline-offset: 4px;
+  text-underline-offset: 3px;
+  color: var(--foreground);
 }
 a:hover {
   color: var(--primary);

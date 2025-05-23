@@ -17,12 +17,34 @@ nav {
   -webkit-backdrop-filter: var(--tw-backdrop-blur);
   backdrop-filter: var(--tw-backdrop-blur);
   padding: 0 10px;
+  font-weight: bold;
 
   .menu {
     display: flex;
     flex-direction: row;
     gap: 1em;
     align-items: center;
+  }
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  a {
+    width: 100%;
+    display: block;
+    border-radius: 50%;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-top: 7px;
+    padding-left: 5px;
+  }
+  a:hover {
+    background-color: red;
   }
 }
 
