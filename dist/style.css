@@ -200,9 +200,17 @@ nav {
   }
 }
 
+footer {
+  width: 95%;
+  margin: auto;
+  padding: calc(var(--spacing) * 12);
+  font-size: medium;
+  color: #9ca3af;
+}
+
 .logo {
   width: 45px;
-  height: 45px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -217,7 +225,7 @@ nav {
     padding-left: 5px;
   }
   a:hover {
-    background-color: red;
+    background-color: var(--primary);
   }
 }
 
@@ -312,6 +320,10 @@ pre code .tag {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 @media (max-width: 768px) {
   .grid-cols-2, 
   .grid-cols-3, 
@@ -349,21 +361,13 @@ div.container {
   max-width: 48rem;
 }
 
-footer {
-  width: 95%;
-  margin: auto;
-  padding: calc(var(--spacing) * 12);
-  font-size: medium;
-}
-
 .title-container {
   text-align: center;
   margin: calc(var(--spacing) * 8) 0;
-}
-
-.title-container p,
-.silent-text {
-  color: #9ca3af;
+  
+  p {
+    color: #9ca3af;
+  }
 }
 
 @media (max-width: 768px) {
@@ -399,6 +403,10 @@ h3 {
 
 .text-right {
   text-align: right;
+}
+
+.silent-text {
+  color: #9ca3af;
 }
 
 .gradient-text {

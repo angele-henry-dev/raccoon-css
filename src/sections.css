@@ -24,21 +24,13 @@ div.container {
   max-width: 48rem;
 }
 
-footer {
-  width: 95%;
-  margin: auto;
-  padding: calc(var(--spacing) * 12);
-  font-size: medium;
-}
-
 .title-container {
   text-align: center;
   margin: calc(var(--spacing) * 8) 0;
-}
-
-.title-container p,
-.silent-text {
-  color: #9ca3af;
+  
+  p {
+    color: #9ca3af;
+  }
 }
 
 @media (max-width: 768px) {

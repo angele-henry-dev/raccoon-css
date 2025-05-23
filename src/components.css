@@ -27,9 +27,17 @@ nav {
   }
 }
 
+footer {
+  width: 95%;
+  margin: auto;
+  padding: calc(var(--spacing) * 12);
+  font-size: medium;
+  color: #9ca3af;
+}
+
 .logo {
   width: 45px;
-  height: 45px;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -44,7 +52,7 @@ nav {
     padding-left: 5px;
   }
   a:hover {
-    background-color: red;
+    background-color: var(--primary);
   }
 }
 

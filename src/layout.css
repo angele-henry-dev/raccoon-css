@@ -15,6 +15,10 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.flex-grow {
+  flex-grow: 1;
+}
+
 @media (max-width: 768px) {
   .grid-cols-2, 
   .grid-cols-3, 

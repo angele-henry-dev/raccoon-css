@@ -21,6 +21,10 @@ h3 {
   text-align: right;
 }
 
+.silent-text {
+  color: #9ca3af;
+}
+
 .gradient-text {
   background: linear-gradient(90deg, var(--primary), var(--secondary));
   -webkit-background-clip: text;
