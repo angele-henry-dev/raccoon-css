@@ -22,6 +22,9 @@
   font-style: normal;
   font-display: swap;
 }
+.open-dyslexic {
+  font-family: 'OpenDyslexic', 'Poppins', sans-serif;
+}
 
 html, body, main {
   width: 100%;
@@ -32,5 +35,18 @@ body {
   font-size: 14pt;
   background-color: var(--background);
   color: var(--foreground);
+  border-color: #2a2d4a;
   margin: 0;
+}
+
+:focus-visible {
+  color: var(--background);
+  background-color: var(--foreground);
+}
+
+.bg-secondary {
+  background-color: #0f1122;
+}
+.bg-colored {
+  background-image: linear-gradient(to right, rgba(88, 28, 135, 0.3), rgba(19, 78, 74, 0.3));
 }
