@@ -26,6 +26,9 @@
   font-family: 'OpenDyslexic', 'Poppins', sans-serif;
 }
 
+* {
+  border-color: #2a2d4a;
+}
 html, body, main {
   width: 100%;
   overflow-x: hidden;
@@ -35,7 +38,6 @@ body {
   font-size: 14pt;
   background-color: var(--background);
   color: var(--foreground);
-  border-color: #2a2d4a;
   margin: 0;
 }
 
