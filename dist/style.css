@@ -1,3 +1,151 @@
-@import './base.css';
-@import './buttons.css';
-@import './utilities.css';
+:root {
+  --color-black: #0a0c1a;
+
+  --color-blue: #64ffda;
+  --color-lavanda: #bf80ff;
+
+  --color-white: #e6f1ff;
+
+  --background: var(--color-black);
+  --background-tr: hsla(0, 0%, 10%, 0.4);
+  --foreground: var(--color-white);
+  --primary: var(--color-lavanda);
+  --secondary: var(--color-blue);
+
+  --spacing: 4px;
+}
+
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('/fonts/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body, main {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14pt;
+  background-color: var(--background);
+  color: var(--foreground);
+  margin: 0;
+}
+
+/* LINKS SYSTEM */
+
+a {
+  text-decoration-line: none;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--primary);
+  text-decoration-line: underline;
+}
+
+/* BUTTONS SYSTEM */
+
+.link-button,
+button {
+  --bg: var(--background);
+  --fg: var(--primary);
+  --border: var(--primary);
+
+  display: inline-block;
+  position: relative;
+  padding: 0.3em 1em;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  border: 2px solid var(--border);
+  border-radius: 2px;
+  cursor: pointer;
+  text-decoration-line: none;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.link-button {
+  background-color: var(--fg);
+  color: var(--bg);
+}
+
+button {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+.link-button::before,
+button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.link-button::before {
+  background-color: var(--bg);
+}
+
+button::before {
+  background-color: var(--fg);
+}
+
+.link-button:hover::before,
+.link-button:focus-visible::before,
+button:hover::before,
+button:focus-visible::before {
+  left: 0;
+  right: 0;
+  opacity: 1;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  color: var(--fg);
+  outline: none;
+  text-decoration-line: none;
+}
+
+button:hover,
+button:focus-visible {
+  color: var(--bg);
+  outline: none;
+  text-decoration-line: none;
+}
+
+.link-button.active,
+button.active {
+  transform: scale(0.97);
+}
+
+.link-button:disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.link-button.active,
+button.active {
+  transform: scale(0.95);
+}
+
+.link-button:disabled,
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* helpers (visually-hidden, sr-only, etc.) */
