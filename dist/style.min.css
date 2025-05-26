@@ -124,6 +124,16 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
 .flex-grow {
   flex-grow: 1;
 }
@@ -423,13 +433,11 @@ ol {
 
   .footer {
     border-top: 1px solid var(--border-color);
-    padding-top: calc(var(--spacing) * 3);
+    padding-top: calc(var(--spacing) * 6);
     margin-top: calc(var(--spacing) * 3);
   }
   .price {
     font-size: 1.5rem;
-    margin-top: calc(var(--spacing) * 3);
-    margin-bottom: calc(var(--spacing) * 3);
   }
 }
 
