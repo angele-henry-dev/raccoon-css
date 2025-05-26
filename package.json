@@ -4,12 +4,22 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/index.css -o dist/style.css"
+		"build": "npm run build:css && npm run build:min",
+		"build:css": "postcss src/index.css -o dist/style.css",
+		"build:min": "postcss src/index.css -o dist/style.min.css -c postcss.min.config.cjs",
+
+		"release:patch": "npm run build && npm version patch && git push && git push --tags && npm publish",
+		"release:minor": "npm run build && npm version minor && git push && git push --tags && npm publish",
+		"release:major": "npm run build && npm version major && git push && git push --tags && npm publish"
 	},
 	"devDependencies": {
 		"autoprefixer": "^10.4.21",
+		"cssnano": "^7.0.7",
 		"postcss": "^8.5.3",
 		"postcss-cli": "^11.0.1",
 		"postcss-import": "^16.1.0"
-	}
+	},
+	"files": [
+		"dist"
+	]
 }
