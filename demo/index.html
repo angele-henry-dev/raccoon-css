@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raccoon CSS Demo</title>
+    <link rel="stylesheet" href="../src/index.css" />
+    <style>
+      .theme-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .theme-swatch {
+        border-radius: 6px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+      .swatch-primary {
+        background: var(--primary);
+        color: var(--background);
+      }
+      .swatch-secondary {
+        background: var(--secondary);
+        color: var(--background);
+      }
+      .swatch-background {
+        background: var(--background);
+        color: var(--foreground);
+        border: 1px solid var(--foreground);
+      }
+      .swatch-foreground {
+        background: var(--foreground);
+        color: var(--background);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+          <div class="menu">
+            <span class="logo">🦝</span>
+            <span class="gradient-text">Raccoon CSS</span>
+          </div>
+          <div class="menu">
+              <a href="#theme" target="_self" title="My theme colors">My theme colors</a>
+              <a href="#buttons" target="_self" title="Buttons">Buttons</a>
+              <a href="#typo" target="_self" title="Text styles">Text styles</a>
+              <a href="#cards" target="_self" title="Cards">Cards</a>
+          </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1 class="open-dyslexic">🦝 Raccoon CSS – Demo</h1>
+        <p>This is a basic demo of the Raccoon CSS components and design tokens.</p>
+      </div>
+    </section>
+
+    <section id="theme" class="bg-secondary">
+      <div class="container">
+        <h2>My theme <span class="gradient-text">colors</span></h2>
+        <div class="theme-grid">
+          <div class="theme-swatch swatch-background">Background</div>
+          <div class="theme-swatch swatch-foreground">Foreground</div>
+          <div class="theme-swatch swatch-primary">Primary</div>
+          <div class="theme-swatch swatch-secondary">Secondary</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="buttons">
+      <div class="container">
+        <h2>Types of <span class="gradient-text">buttons</span></h2>
+        <button>Button</button>
+        <a href="#" class="link-button">Link Button</a>
+        <button class="active">Active</button>
+        <button disabled>Disabled</button>
+      </div>
+    </section>
+
+    <section id="typo" class="bg-secondary">
+      <div class="container">
+        <h2><span class="gradient-text">Text</span> styles</h2>
+        <p>
+          Lorem ipsum <strong>bold</strong>, <em>italic</em>, and
+          <a href="#">a link</a>.
+        </p>
+        <p>Et ici une liste :</p>
+        <ul>
+          <li>Plop 1</li>
+          <li>Plop 2</li>
+          <li>Plop 3</li>
+          <li>Plop 4</li>
+        </ul>
+        <p>Et une liste à chiffres :</p>
+        <ol>
+          <li>Plop 1</li>
+          <li>Plop 2</li>
+          <li>Plop 3</li>
+          <li>Plop 4</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="cards">
+      <div class="container">
+        <h2>Types of <span class="gradient-text">cards</span></h2>
+        <div class="grid grid-cols-3">
+          <div class="card">
+            <h3>A simple card</h3>
+              <p class="silent-text">
+                Lorem ipsum
+              </p>
+          </div>
+
+          <div class="card bg-colored">
+            <h3>A colored card</h3>
+              <p class="silent-text">
+                Lorem ipsum
+              </p>
+          </div>
+
+          <div class="card card-hover">
+            <div class="ribbon">
+              POPULAR
+            </div>
+            <h3>A pricing card</h3>
+            <p class="silent-text">The subtitle of the card</p>
+            <div class="flex-grow">
+              Lorem Ipsum
+            </div>
+            <div class="footer">
+              <div class="price">
+                1 000€<span class="silent-text">&nbsp;/&nbsp;mois</span>
+              </div>
+              <a
+                href="#"
+                title="S'abonner"
+                aria-label="S'abonner"
+                target="_self"
+                class="link-button"
+              >
+                S'abonner
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-secondary">
+      <div class="container">
+        <h2>
+          L'<span class="gradient-text">accordéon</span>
+        </h2>
+        <details>
+          <summary>À quoi ça sert ?</summary>
+          <p>À gagner de la place</p>
+        </details>
+      </div>
+    </section>
+
+    <footer class="grid grid-cols-2">
+      <div>
+        <div><Link href="https://forabetter.tech/legal-notice" target="_self" title="Accéder aux Mentions légales">Mentions légales</Link></div>
+        <div><Link href="https://forabetter.tech/privacy-policy" target="_self" title="Accéder à la Politique de confidentialité">Politique de confidentialité</Link></div>
+      </div>
+      <div class="text-right">
+        <div>
+          Police d'écriture &apos;OpenDyslexic&apos; par Abelardo Gonzalez
+        </div>
+        <div>
+          <span class="open-dyslexic">&copy; forabetter.tech par Lady Raccoon</span> ‧ 2025
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -39,7 +39,6 @@ body {
   font-size: 1rem;
   background-color: var(--background);
   color: var(--foreground);
-  margin: 0;
 }
 
 :focus-visible {
@@ -104,7 +103,12 @@ p {
 
 .grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: calc(var(--spacing) * 8);
+  margin-top: 2rem;
+}
+
+.grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
@@ -207,11 +211,11 @@ button {
   --fg: var(--primary);
   --border: var(--primary);
 
-  display: inline-block;
   position: relative;
   padding: 0.3em 1em;
   text-align: center;
   font-weight: bold;
+  font-size: 1rem;
   letter-spacing: 1.5px;
   border: 2px solid var(--border);
   border-radius: 2px;
@@ -306,7 +310,6 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 70px;
   z-index: 50;
 }
 
@@ -318,7 +321,7 @@ nav {
   --tw-backdrop-blur: blur(64px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur);
   backdrop-filter: var(--tw-backdrop-blur);
-  padding: 0 10px;
+  padding: 10px;
   font-weight: bold;
 
   .menu {
@@ -452,22 +455,26 @@ table {
 
 /* PRE FOR CODE */
 
-/* pre {
+pre {
   border-width: 1px;
   border-left: 10px solid var(--secondary);
   white-space: pre-wrap;
   max-height: 300px;
   overflow: auto;
-  tab-size: 4;
+  -moz-tab-size: 4;
+    -o-tab-size: 4;
+       tab-size: 4;
 }
+
 pre code {
   font-family: "Courier New", Courier, monospace;
   display: block;
   padding: 20px;
   color: var(--foreground);
 }
+
 pre code .tag {
   color: hsl(24, 100%, 70%);
-} */
+}
 
 /* helpers (visually-hidden, sr-only, etc.) */
