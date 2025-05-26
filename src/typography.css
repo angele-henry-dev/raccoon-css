@@ -22,7 +22,7 @@ h3 {
 }
 
 .silent-text {
-  color: #9ca3af;
+  color: var(--color-grey);
 }
 
 .gradient-text {

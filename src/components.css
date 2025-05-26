@@ -31,7 +31,6 @@ footer {
   margin: auto;
   padding: calc(var(--spacing) * 12);
   font-size: medium;
-  color: #9ca3af;
 }
 
 .logo {
@@ -130,7 +129,7 @@ ol {
 }
 
 .bg-secondary {
-  background-color: #0f1122;
+  background-color: var(--background-tr);
 }
 .bg-colored {
   background-image: linear-gradient(to right, rgba(88, 28, 135, 0.3), rgba(19, 78, 74, 0.3));

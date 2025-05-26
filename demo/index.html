@@ -40,6 +40,18 @@
         color: var(--background);
       }
     </style>
+
+    <script>
+      const currentTheme = localStorage.getItem('theme') || 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+
+      function updateTheme() {
+        const active = document.documentElement.getAttribute('data-theme');
+        const next = active === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      }
+    </script>
   </head>
 
   <body>
@@ -54,6 +66,7 @@
               <a href="#buttons" target="_self" title="Buttons">Buttons</a>
               <a href="#typo" target="_self" title="Text styles">Text styles</a>
               <a href="#cards" target="_self" title="Cards">Cards</a>
+              <button id="toggleTheme" class="button" title="Toggle theme" onclick="updateTheme()">🌓 Theme</button>
           </div>
       </nav>
     </header>
@@ -171,7 +184,7 @@
       </div>
     </section>
 
-    <footer class="grid grid-cols-2">
+    <footer class="grid grid-cols-2 silent-text">
       <div>
         <div><Link href="https://forabetter.tech/legal-notice" target="_self" title="Accéder aux Mentions légales">Mentions légales</Link></div>
         <div><Link href="https://forabetter.tech/privacy-policy" target="_self" title="Accéder à la Politique de confidentialité">Politique de confidentialité</Link></div>

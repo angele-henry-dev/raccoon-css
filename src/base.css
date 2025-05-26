@@ -1,20 +1,36 @@
 :root {
   --color-black: #0a0c1a;
-
-  --color-blue: #64ffda;
-  --color-lavanda: #bf80ff;
-
+  --color-grey-light: #9ca3af;
+  --color-grey-dark: #2a2d4a;
+  --color-blue: hsl(166, 100%, 70%);
+  --color-blue-dark: hsl(166, 100%, 18%);
+  --color-lavanda: hsl(270, 100%, 75%);
+  --color-lavanda-dark: hsl(270, 100%, 30%);
   --color-white: #e6f1ff;
 
+  --spacing: 4px;
+}
+
+:root {
+  --background: var(--color-white);
+  --background-tr: hsla(166, 100%, 70%, 0.1);
+  --foreground: var(--color-black);
+  --primary: var(--color-lavanda-dark);
+  --secondary: var(--color-blue-dark);
+  --color-grey: var(--color-grey-dark);
+
+  --border-color: var(--color-grey);
+}
+
+[data-theme='dark'] {
   --background: var(--color-black);
-  --background-tr: hsla(0, 0%, 10%, 0.4);
+  --background-tr: hsla(0, 0%, 0%, 0.4);
   --foreground: var(--color-white);
   --primary: var(--color-lavanda);
   --secondary: var(--color-blue);
+  --color-grey: var(--color-grey-light);
 
-  --border-color: #2a2d4a;
-
-  --spacing: 4px;
+  --border-color: var(--color-grey);
 }
 
 @font-face {
@@ -31,6 +47,7 @@
 html, body, main {
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
 }
 body {
   font-family: 'Poppins', sans-serif;
