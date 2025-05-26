@@ -12,6 +12,8 @@
   --primary: var(--color-lavanda);
   --secondary: var(--color-blue);
 
+  --border-color: #2a2d4a;
+
   --spacing: 4px;
 }
 
@@ -26,9 +28,6 @@
   font-family: 'OpenDyslexic', 'Poppins', sans-serif;
 }
 
-* {
-  border-color: #2a2d4a;
-}
 html, body, main {
   width: 100%;
   overflow-x: hidden;

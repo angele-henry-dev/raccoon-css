@@ -12,6 +12,8 @@
   --primary: var(--color-lavanda);
   --secondary: var(--color-blue);
 
+  --border-color: #2a2d4a;
+
   --spacing: 4px;
 }
 
@@ -25,10 +27,6 @@
 
 .open-dyslexic {
   font-family: 'OpenDyslexic', 'Poppins', sans-serif;
-}
-
-* {
-  border-color: #2a2d4a;
 }
 
 html, body, main {
@@ -364,7 +362,7 @@ footer {
 /* ACCORDEON */
 
 details {
-  border-bottom-width: 1px;
+  border-bottom: 1px solid var(--border-color);
   padding: calc(var(--spacing) * 4);
 
   summary {
@@ -396,7 +394,7 @@ ol {
   display: flex;
   flex-direction: column;
   background: linear-gradient(145deg, #1a1d3a, #0f1122);
-  border-width: 1px;
+  border-width: 1px solid var(--border-color);
   border-radius: 12px;
   padding: calc(var(--spacing) * 8);
   transition: all 0.3s ease;
@@ -416,12 +414,30 @@ ol {
     border-top-right-radius: 0.75rem;
     font-size: 0.75rem;
   }
+
+  h3 {
+    margin-bottom: 0;
+  }
+  p {
+    font-size: 0.75rem;
+  }
+
+  .footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: calc(var(--spacing) * 10);
+    margin-top: calc(var(--spacing) * 10);
+  }
+  .price {
+    font-size: 2rem;
+    margin-top: calc(var(--spacing) * 10);
+    margin-bottom: calc(var(--spacing) * 10);
+  }
 }
 
 .card-hover:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(102, 252, 241, 0.1);
-  border-color: var(--secondary);
+  border: 1px solid var(--secondary);
 }
 
 /* TABLES */
