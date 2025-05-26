@@ -90,7 +90,7 @@ ol {
   display: flex;
   flex-direction: column;
   background: linear-gradient(145deg, #1a1d3a, #0f1122);
-  border-width: 1px solid var(--border-color);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: calc(var(--spacing) * 8);
   transition: all 0.3s ease;
@@ -120,13 +120,16 @@ ol {
 
   .footer {
     border-top: 1px solid var(--border-color);
-    padding-top: calc(var(--spacing) * 10);
-    margin-top: calc(var(--spacing) * 10);
+    padding-top: calc(var(--spacing) * 3);
+    margin-top: calc(var(--spacing) * 3);
   }
   .price {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-top: calc(var(--spacing) * 10);
     margin-bottom: calc(var(--spacing) * 10);
+  }
+  a {
+    width: 100%;
   }
 }
 .card-hover:hover {
