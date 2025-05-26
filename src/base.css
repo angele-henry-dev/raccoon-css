@@ -2,10 +2,8 @@
   --color-black: #0a0c1a;
   --color-grey-light: #9ca3af;
   --color-grey-dark: #2a2d4a;
-  --color-blue: hsl(166, 100%, 70%);
-  --color-blue-dark: hsl(166, 100%, 18%);
-  --color-lavanda: hsl(270, 100%, 75%);
-  --color-lavanda-dark: hsl(270, 100%, 30%);
+  --color-blue: #3bd1c4;
+  --color-lavanda: #bf80ff;
   --color-white: #e6f1ff;
 
   --spacing: 4px;
@@ -15,21 +13,22 @@
   --background: var(--color-black);
   --background-tr: hsla(0, 0%, 0%, 0.4);
   --foreground: var(--color-white);
+
   --primary: var(--color-lavanda);
   --secondary: var(--color-blue);
-  --color-grey: var(--color-grey-light);
 
+  --color-grey: var(--color-grey-light);
   --border-color: var(--color-grey);
 }
 [data-theme='light'] {
   --background: var(--color-white);
   --background-tr: hsla(166, 100%, 70%, 0.1);
   --foreground: var(--color-black);
-  --primary: var(--color-lavanda-dark);
-  --secondary: var(--color-blue-dark);
-  --color-grey: var(--color-grey-dark);
 
-  --border-color: var(--color-grey);
+  --primary: var(--color-blue);
+  --secondary: var(--color-lavanda);
+
+  --color-grey: var(--color-grey-dark);
 }
 
 @font-face {

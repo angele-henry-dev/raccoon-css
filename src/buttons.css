@@ -36,11 +36,11 @@ button {
 
 .link-button {
   background-color: var(--fg);
-  color: var(--bg);
+  color: var(--background);
 }
 button {
   background-color: var(--bg);
-  color: var(--fg);
+  color: var(--foreground);
 }
 
 .link-button::before,
@@ -73,14 +73,14 @@ button:focus-visible::before {
 
 .link-button:hover,
 .link-button:focus-visible {
-  color: var(--fg);
+  color: var(--foreground);
   outline: none;
   text-decoration-line: none;
 }
 
 button:hover,
 button:focus-visible {
-  color: var(--bg);
+  color: var(--background);
   outline: none;
   text-decoration-line: none;
 }
