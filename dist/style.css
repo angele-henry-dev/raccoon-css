@@ -12,23 +12,23 @@
 }
 
 :root {
-  --background: var(--color-white);
-  --background-tr: hsla(166, 100%, 70%, 0.1);
-  --foreground: var(--color-black);
-  --primary: var(--color-lavanda-dark);
-  --secondary: var(--color-blue-dark);
-  --color-grey: var(--color-grey-dark);
-
-  --border-color: var(--color-grey);
-}
-
-[data-theme='dark'] {
   --background: var(--color-black);
   --background-tr: hsla(0, 0%, 0%, 0.4);
   --foreground: var(--color-white);
   --primary: var(--color-lavanda);
   --secondary: var(--color-blue);
   --color-grey: var(--color-grey-light);
+
+  --border-color: var(--color-grey);
+}
+
+[data-theme='light'] {
+  --background: var(--color-white);
+  --background-tr: hsla(166, 100%, 70%, 0.1);
+  --foreground: var(--color-black);
+  --primary: var(--color-lavanda-dark);
+  --secondary: var(--color-blue-dark);
+  --color-grey: var(--color-grey-dark);
 
   --border-color: var(--color-grey);
 }
@@ -400,7 +400,7 @@ details {
     cursor: pointer;
   }
   p {
-    margin-top: calc(var(--spacing) * 2);
+    margin-top: calc(var(--spacing) * 5);
     margin-left: calc(var(--spacing) * 10);
   }
 }

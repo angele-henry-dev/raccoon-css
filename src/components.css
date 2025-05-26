@@ -64,7 +64,7 @@ details {
     cursor: pointer;
   }
   p {
-    margin-top: calc(var(--spacing) * 2);
+    margin-top: calc(var(--spacing) * 5);
     margin-left: calc(var(--spacing) * 10);
   }
 }
