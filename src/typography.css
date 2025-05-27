@@ -32,6 +32,15 @@ h3 {
   color: transparent;
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--section-space);
+  color: var(--secondary);
+  font-size: small;
+}
+
 p {
   margin: calc(var(--spacing) * 6) 0;
 }
