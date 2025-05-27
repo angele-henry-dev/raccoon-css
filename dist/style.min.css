@@ -2,10 +2,8 @@
   --color-black: #0a0c1a;
   --color-grey-light: #9ca3af;
   --color-grey-dark: #2a2d4a;
-  --color-blue: hsl(166, 100%, 70%);
-  --color-blue-dark: hsl(166, 100%, 18%);
-  --color-lavanda: hsl(270, 100%, 75%);
-  --color-lavanda-dark: hsl(270, 100%, 30%);
+  --color-blue: #3bd1c4;
+  --color-lavanda: #bf80ff;
   --color-white: #e6f1ff;
 
   --spacing: 4px;
@@ -15,10 +13,11 @@
   --background: var(--color-black);
   --background-tr: hsla(0, 0%, 0%, 0.4);
   --foreground: var(--color-white);
+
   --primary: var(--color-lavanda);
   --secondary: var(--color-blue);
-  --color-grey: var(--color-grey-light);
 
+  --color-grey: var(--color-grey-light);
   --border-color: var(--color-grey);
 }
 
@@ -26,11 +25,11 @@
   --background: var(--color-white);
   --background-tr: hsla(166, 100%, 70%, 0.1);
   --foreground: var(--color-black);
-  --primary: var(--color-lavanda-dark);
-  --secondary: var(--color-blue-dark);
-  --color-grey: var(--color-grey-dark);
 
-  --border-color: var(--color-grey);
+  --primary: var(--color-blue);
+  --secondary: var(--color-lavanda);
+
+  --color-grey: var(--color-grey-dark);
 }
 
 @font-face {
@@ -141,16 +140,18 @@ p {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.row {
+.row, .col {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  gap: calc(var(--spacing) * 8);
+}
+
+.row {
+  flex-direction: row;
 }
 
 .col {
-  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .flex-grow {
@@ -258,12 +259,12 @@ button {
 
 .link-button {
   background-color: var(--fg);
-  color: var(--bg);
+  color: var(--background);
 }
 
 button {
   background-color: var(--bg);
-  color: var(--fg);
+  color: var(--foreground);
 }
 
 .link-button::before,
@@ -298,21 +299,33 @@ button:focus-visible::before {
 
 .link-button:hover,
 .link-button:focus-visible {
-  color: var(--fg);
+  color: var(--foreground);
   outline: none;
   text-decoration-line: none;
 }
 
 button:hover,
 button:focus-visible {
-  color: var(--bg);
+  color: var(--background);
   outline: none;
   text-decoration-line: none;
 }
 
+.link-button.active::before,
+button.active::before {
+  background-color: var(--background);
+}
+
 .link-button.active,
 button.active {
-  transform: scale(0.97);
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--background);
+}
+
+.link-button.active:hover,
+button.active:hover {
+  color: var(--foreground);
 }
 
 .link-button:disabled,
@@ -320,17 +333,6 @@ button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
   pointer-events: none;
-}
-
-.link-button.active,
-button.active {
-  transform: scale(0.95);
-}
-
-.link-button:disabled,
-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
 }
 
 /* HEADER */

@@ -26,15 +26,11 @@
       .logo .icon:hover .primary {
         fill: var(--background);
       }
-      .theme-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 1rem;
-        margin-top: 2rem;
-      }
+
       .theme-swatch {
         border-radius: 6px;
         height: 80px;
+        width: 180px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -125,7 +121,7 @@
     <section id="theme" class="bg-secondary">
       <div class="container">
         <h2>My theme <span class="gradient-text">colors</span></h2>
-        <div class="theme-grid">
+        <div class="row">
           <div class="theme-swatch swatch-background">Background</div>
           <div class="theme-swatch swatch-foreground">Foreground</div>
           <div class="theme-swatch swatch-primary">Primary</div>

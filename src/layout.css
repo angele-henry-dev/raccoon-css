@@ -19,15 +19,16 @@
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.row {
+.row, .col {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  gap: calc(var(--spacing) * 8);
+}
+.row {
+  flex-direction: row;
 }
 .col {
-  display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 .flex-grow {
   flex-grow: 1;

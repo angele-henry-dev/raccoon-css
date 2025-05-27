@@ -85,23 +85,24 @@ button:focus-visible {
   text-decoration-line: none;
 }
 
+.link-button.active::before,
+button.active::before {
+  background-color: var(--background);
+}
 .link-button.active,
 button.active {
-  transform: scale(0.97);
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+  color: var(--background);
 }
+.link-button.active:hover,
+button.active:hover {
+  color: var(--foreground);
+}
+
 .link-button:disabled,
 button:disabled {
   cursor: not-allowed;
   opacity: 0.6;
   pointer-events: none;
-}
-
-.link-button.active,
-button.active {
-  transform: scale(0.95);
-}
-.link-button:disabled,
-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
 }
