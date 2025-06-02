@@ -34,13 +34,14 @@ button {
   z-index: 1;
 }
 
-.link-button {
-  background-color: var(--fg);
-  color: var(--background);
-}
 button {
   background-color: var(--bg);
   color: var(--foreground);
+}
+.link-button,
+button.primary {
+  background-color: var(--fg);
+  color: var(--background);
 }
 
 .link-button::before,
